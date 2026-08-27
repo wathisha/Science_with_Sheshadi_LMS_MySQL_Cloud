@@ -12,7 +12,7 @@
 
     // Global Default Configuration Constants (Stored as Pure JSON)
     const DEFAULT_SETTINGS = {
-        academyName: "Sathsarani Science Academy",
+        academyName: "Sheshadi Science Academy",
         tagline: "GRADE 6-11 SCIENCE SPECIALIST",
         motto: "UNDERSTAND TODAY, SUCCEED TOMORROW",
         teacherName: "Mrs. Sheshadi Amarasinghe",
