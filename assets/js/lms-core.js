@@ -37,7 +37,7 @@
         {
             id: "USR-101",
             username: "sheshadi",
-            password: "password123",
+            password: "sheshadi0305",
             name: "Mrs. Sheshadi Amarasinghe",
             email: "sheshadi@scienceacademy.lk",
             phone: "071 781 2092",
@@ -55,7 +55,7 @@
         {
             id: "USR-102",
             username: "wathisha",
-            password: "admin2026",
+            password: "wathisha0305",
             name: "Wathisha Amarasinghe",
             email: "wathisha@scienceacademy.lk",
             phone: "077 161 4260",
