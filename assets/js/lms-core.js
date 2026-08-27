@@ -22,7 +22,7 @@
         bgImage: "assets/images/lms_background.png",
         theme: "light",
         subjectList: ["06 - Science", "07 - Science", "08 - Science", "09 - Science", "10 - Science", "11 - Science"],
-        announcement: "Welcome to Sathsarani Science Academy LMS! Grade 06-11 Science Master Guidebooks, past paper revisions, WhatsApp & Zoom live classes are active.",
+        announcement: "Welcome to Sheshadi Science Academy LMS! Grade 06-11 Science Master Guidebooks, past paper revisions, WhatsApp & Zoom live classes are active.",
         offerings: [
             "Clear Explanations",
             "Exam Focused Learning",
@@ -741,7 +741,7 @@
                 this.setCurrentUser(fallbackUser);
                 return fallbackUser;
             }
-            if (u === 'wathisha' && (p === 'admin2026' || p === 'password123')) {
+            if (u === 'wathisha' && (p === 'wathisha0305' || p === 'wathisha0305')) {
                 const fallbackUser = DEFAULT_USERS[1];
                 this.setCurrentUser(fallbackUser);
                 return fallbackUser;
