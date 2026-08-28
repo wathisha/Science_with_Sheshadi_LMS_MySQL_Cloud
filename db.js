@@ -901,7 +901,7 @@ async function exportFullDb() {
 
     return {
         exportTimestamp: new Date().toISOString(),
-        academy: 'Sathsarani Science Academy LMS',
+        academy: 'Sheshadi Science Academy LMS',
         databaseEngine: pool ? 'MySQL Cloud Database' : 'JSON Storage',
         students,
         config,
