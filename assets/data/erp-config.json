@@ -1,10 +1,10 @@
 {
   "adminAuth": {
     "username": "sheshadi",
-    "password": "password123"
+    "password": "sheshadi0305"
   },
   "settings": {
-    "academyName": "Sathsarani Science Academy",
+    "academyName": "Sheshadi Science Academy",
     "tagline": "GRADE 6-11 SCIENCE SPECIALIST",
     "motto": "UNDERSTAND TODAY, SUCCEED TOMORROW",
     "teacherName": "Mrs. Sheshadi Amarasinghe",
@@ -20,7 +20,7 @@
       "10 - Science",
       "11 - Science"
     ],
-    "announcement": "Welcome to Sathsarani Science Academy LMS! Grade 06-11 Science Master Guidebooks, past paper revisions, WhatsApp & Zoom live classes are active.",
+    "announcement": "Welcome to Sheshadi Science Academy LMS! Grade 06-11 Science Master Guidebooks, past paper revisions, WhatsApp & Zoom live classes are active.",
     "offerings": [
       "Clear Explanations",
       "Exam Focused Learning",
