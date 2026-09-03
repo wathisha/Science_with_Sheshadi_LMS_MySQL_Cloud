@@ -435,7 +435,7 @@
         // 2. THEME & BRANDING ENGINE
         // =========================================================================
         getTheme() {
-            return localStorage.getItem('erp_theme_mode') || 'light';
+            return localStorage.getItem('erp_theme_mode') || 'dark';
         },
         setTheme(mode) {
             const theme = (mode === 'dark') ? 'dark' : 'light';
