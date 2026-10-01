@@ -222,31 +222,4 @@
       }
     ]
   },
- /* {
-    "id": "USR-100",
-    "username": "admin",
-    "password": "password123",
-    "name": "Master Administrator",
-    "email": "admin@scienceacademy.lk",
-    "phone": "071 781 2092",
-    "role": "super_admin",
-    "roleName": "Super Admin (System Fallback)",
-    "title": "Central System Administrator",
-    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=MasterAdmin",
-    "permissions": [
-      "manage_users",
-      "edit_system_settings",
-      "manage_students",
-      "delete_students",
-      "grade_students",
-      "manage_content",
-      "view_teacher_vault",
-      "database_admin"
-    ],
-    "status": "active",
-    "createdDate": "2026-01-01",
-    "lastLogin": "2026-08-21 21:00",
-    "lastDevice": "PC / Desktop",
-    "deviceSessions": []
-  } */
 ]
