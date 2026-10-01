@@ -222,7 +222,7 @@
       }
     ]
   },
-  {
+ /* {
     "id": "USR-100",
     "username": "admin",
     "password": "password123",
@@ -248,5 +248,5 @@
     "lastLogin": "2026-08-21 21:00",
     "lastDevice": "PC / Desktop",
     "deviceSessions": []
-  }
+  } */
 ]
