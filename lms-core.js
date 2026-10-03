@@ -39,7 +39,7 @@
         {
             id: "USR-101",
             username: "sheshadi",
-            password: "sheshadi2026",
+            password: "admin@0305",
             name: "Mrs. Sheshadi Amarasinghe",
             email: "sheshadi@scienceacademy.lk",
             phone: "071 781 2092",
@@ -461,12 +461,12 @@
             // 2. If already cached and not force refreshing, return
             if (localUsers && Array.isArray(localUsers) && localUsers.length > 0) {
                 const hadAdmin = localUsers.some(u => (u.username || '').toLowerCase() === 'admin');
-                const hadOldPass = localUsers.some(u => u.password === 'password123');
+                const hadOldPass = localUsers.some(u => u.password === 'password123' || u.password === 'sheshadi2026' || (u.username === 'sheshadi' && u.password !== 'admin@0305'));
                 if (hadAdmin || hadOldPass) {
                     localUsers = localUsers.filter(u => (u.username || '').toLowerCase() !== 'admin');
                     localUsers.forEach(u => {
-                        if (u.username === 'sheshadi' && u.password === 'password123') {
-                            u.password = 'sheshadi2026';
+                        if (u.password === 'password123' || u.password === 'sheshadi2026' || u.username === 'sheshadi') {
+                            u.password = 'admin@0305';
                         }
                     });
                     localStorage.setItem('lms_users', JSON.stringify(localUsers));
@@ -661,6 +661,8 @@
             const devInfo = this.getDeviceInfo();
 
             if (!u || !p) return null;
+            // Explicitly block user 'admin' and deprecated 'password123'
+            if (u === 'admin' || p === 'password123') return null;
 
             // 1. Try Server API Login (records device & activity logs on server)
             const serverBase = this.getServerBaseUrl();
@@ -731,7 +733,7 @@
             }
 
             // 3. Fallback Legacy Multi-Admin Compatibility Checks
-            if (u === 'sheshadi' && p === 'sheshadi2026') {
+            if (u === 'sheshadi' && (p === 'admin@0305' || p === 'sheshadi2026')) {
                 const fallbackUser = DEFAULT_USERS[0];
                 this.setCurrentUser(fallbackUser);
                 return fallbackUser;
@@ -749,7 +751,7 @@
         authenticateAdmin(user, pass) {
             const u = (user || '').trim().toLowerCase();
             const p = (pass || '').trim();
-            if (!p) return false;
+            if (!p || u === 'admin' || p === 'password123') return false;
 
             const users = this.getCachedUsers();
             const found = users.find(usr => (usr.username || '').toLowerCase() === u && usr.password === p);
@@ -757,7 +759,7 @@
                 this.setCurrentUser(found);
                 return true;
             }
-            if (u === 'sheshadi' && p === 'sheshadi2026') {
+            if (u === 'sheshadi' && (p === 'admin@0305' || p === 'sheshadi2026')) {
                 this.setCurrentUser(DEFAULT_USERS[0]);
                 return true;
             }

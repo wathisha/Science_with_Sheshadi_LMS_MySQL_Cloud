@@ -118,7 +118,7 @@ When deploying to **Render.com** or **Railway**:
 
 | Username | Password | Role | Designation |
 |---|---|---|---|
-| `sheshadi` | `sheshadi2026` | Super Admin | Head Science Specialist |
+| `sheshadi` | `admin@0305` | Super Admin | Head Science Specialist |
 | `wathisha` | `admin2026` | Super Admin | Lead Cloud & Systems Architect |
 
 ---

@@ -190,6 +190,20 @@ const server = http.createServer(async (req, res) => {
                 return sendJson(res, 400, { error: 'Username and password are required.' });
             }
 
+            // Explicitly block user 'admin' and deprecated 'password123'
+            if (cleanUser === 'admin' || cleanPass === 'password123') {
+                await db.addLog({
+                    username: cleanUser,
+                    userFullName: 'Blocked / Deprecated Credentials',
+                    role: 'None',
+                    action: 'AUTH_BLOCKED',
+                    deviceType: detectDevice(userAgent, clientDevice),
+                    ip: clientIp,
+                    details: `Blocked login attempt for deprecated credentials '${cleanUser}'`
+                });
+                return sendJson(res, 401, { error: 'Invalid username or password.' });
+            }
+
             const user = await db.getUserByUsername(cleanUser);
 
             if (!user || user.password !== cleanPass) {

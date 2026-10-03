@@ -291,6 +291,16 @@ async function init() {
             await connection.query(CREATE_TABLE_ERP_CONFIG);
             await connection.query(CREATE_TABLE_TEACHER_DOCS);
             await connection.query(CREATE_TABLE_ACTIVITY_LOGS);
+
+            // Execute user security migration: remove user 'admin' and update 'password123' to 'admin@0305'
+            try {
+                await connection.query("DELETE FROM users WHERE LOWER(username) = 'admin'");
+                await connection.query("UPDATE users SET password = 'admin@0305' WHERE password = 'password123' OR LOWER(username) = 'sheshadi'");
+                await connection.query("UPDATE students SET password = 'admin@0305' WHERE password = 'password123'");
+                console.log("🔒 [Security Update] MySQL/TiDB database cleaned: user 'admin' removed and passwords updated to 'admin@0305'.");
+            } catch (migErr) {
+                console.warn("Notice during user security migration:", migErr.message);
+            }
             
             connection.release();
 
@@ -496,16 +506,27 @@ async function getUsers() {
 async function getUserByUsername(username) {
     await init();
     const cleanUser = (username || '').trim().toLowerCase();
-    if (!cleanUser) return null;
+    if (!cleanUser || cleanUser === 'admin') return null;
 
     if (pool) {
         const [rows] = await pool.query('SELECT * FROM users WHERE LOWER(username) = ? LIMIT 1', [cleanUser]);
-        if (rows.length > 0) return mapUserRow(rows[0]);
+        if (rows.length > 0) {
+            const mapped = mapUserRow(rows[0]);
+            if (mapped.password === 'password123') {
+                mapped.password = 'admin@0305';
+                pool.query("UPDATE users SET password = 'admin@0305' WHERE id = ?", [mapped.id]).catch(() => {});
+            }
+            return mapped;
+        }
         return null;
     }
 
     const users = readJsonFile(USERS_FILE, []);
-    return users.find(u => (u.username || '').toLowerCase() === cleanUser) || null;
+    const found = users.find(u => (u.username || '').toLowerCase() === cleanUser) || null;
+    if (found && found.password === 'password123') {
+        found.password = 'admin@0305';
+    }
+    return found;
 }
 
 async function getUserById(id) {
@@ -549,7 +570,7 @@ async function createUser(user) {
         await pool.query(sql, [
             id,
             cleanUser,
-            user.password || 'teacher123',
+            user.password || 'admin@0305',
             user.name || '',
             user.email || `${cleanUser}@scienceacademy.lk`,
             user.phone || '071 781 2092',
