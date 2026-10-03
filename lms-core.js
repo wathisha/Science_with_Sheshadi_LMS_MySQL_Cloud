@@ -461,11 +461,11 @@
             // 2. If already cached and not force refreshing, return
             if (localUsers && Array.isArray(localUsers) && localUsers.length > 0) {
                 const hadAdmin = localUsers.some(u => (u.username || '').toLowerCase() === 'admin');
-                const hadOldPass = localUsers.some(u => u.password === 'password123' || u.password === 'sheshadi2026' || (u.username === 'sheshadi' && u.password !== 'admin@0305'));
+                const hadOldPass = localUsers.some(u => u.password === 'admin@0305' || u.password === 'admin@0305' || (u.username === 'sheshadi' && u.password !== 'admin@0305'));
                 if (hadAdmin || hadOldPass) {
                     localUsers = localUsers.filter(u => (u.username || '').toLowerCase() !== 'admin');
                     localUsers.forEach(u => {
-                        if (u.password === 'password123' || u.password === 'sheshadi2026' || u.username === 'sheshadi') {
+                        if (u.password === 'admin@0305' || u.password === 'admin@0305' || u.username === 'sheshadi') {
                             u.password = 'admin@0305';
                         }
                     });
@@ -662,7 +662,7 @@
 
             if (!u || !p) return null;
             // Explicitly block user 'admin' and deprecated 'password123'
-            if (u === 'admin' || p === 'password123') return null;
+            if (u === 'admin' || p === 'admin@0305') return null;
 
             // 1. Try Server API Login (records device & activity logs on server)
             const serverBase = this.getServerBaseUrl();
