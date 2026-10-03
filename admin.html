@@ -23,9 +23,25 @@
                         cinzel: ['Cinzel', 'serif'],
                         rajdhani: ['Rajdhani', 'sans-serif'],
                         sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#fff7ed',
+                            100: '#ffedd5',
+                            500: '#ff5900',
+                            600: '#ea580c',
+                            700: '#c2410c',
+                        },
+                        yadea: {
+                            orange: '#ff5900',
+                            dark: '#0b0e14',
+                            carbon: '#12161f',
+                            cyan: '#00d2ff',
+                        }
                     }
                 }
             }
+        }
         }
     </script>
 </head>
@@ -37,9 +53,9 @@
             
             <!-- Academy Branding -->
             <div class="flex items-center space-x-3">
-                <img src="assets/images/logo.png" alt="Logo" class="h-10 w-10 sm:h-18 sm:w-18 object-contain rounded-xl border border-amber-500/30 p-1 bg-slate-950 shadow-md">
+                <img src="assets/images/logo.png" alt="Logo" class="branding-logo h-10 w-10 sm:h-12 sm:w-12 object-contain rounded-xl border border-amber-500/30 p-1 bg-slate-950 shadow-md">
                 <div>
-                    <h1 class="text-base sm:text-xl font-bold font-cinzel text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-yellow-400 to-rose-400 branding-academy-name">
+                    <h1 class="text-base sm:text-xl font-bold font-cinzel text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-amber-400 to-yellow-300 branding-academy-name">
                         SCIENCE with SHESHADI
                     </h1>
                     <div class="flex items-center gap-2">
@@ -132,18 +148,18 @@
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 flex-grow w-full space-y-8">
 
         <!-- Top Teacher Showcase & Live Classroom (WhatsApp / Zoom) Launcher Banner -->
-        <section class="glass-panel p-5 sm:p-8 relative overflow-hidden border-rose-500/30">
+        <section class="glass-panel p-5 sm:p-8 relative overflow-hidden border-orange-500/30">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
                 
                 <!-- Teacher Profile Info & Credentials Artwork -->
                 <div class="flex flex-col sm:flex-row items-start sm:items-center space-y-4 sm:space-y-0 sm:space-x-6 lg:col-span-7">
                     <div class="relative">
-                        <img src="assets/images/teacher_banner.png" alt="Teacher Avatar" class="branding-teacher-photo w-24 h-28 sm:w-28 sm:h-32 object-cover rounded-2xl border-2 border-amber-400 shadow-2xl bg-slate-950">
+                        <img src="assets/images/teacher_banner.png" alt="Teacher Avatar" class="branding-teacher-photo branding-banner w-24 h-28 sm:w-28 sm:h-32 object-cover rounded-2xl border-2 border-amber-400 shadow-2xl bg-slate-950">
                         <span class="absolute -bottom-2 -right-2 bg-amber-500 text-slate-950 text-[10px] font-black px-2 py-0.5 rounded-full uppercase shadow">Grade 6-11</span>
                     </div>
                     <div class="space-y-1.5">
                         <div class="flex flex-wrap items-center gap-2">
-                            <span class="px-3 py-0.5 bg-rose-500/20 border border-rose-500/40 text-rose-300 text-xs font-bold rounded-full uppercase tracking-wider">
+                            <span class="px-3 py-0.5 bg-orange-500/20 border border-orange-500/40 text-orange-300 text-xs font-bold rounded-full uppercase tracking-wider">
                                 Head Science Specialist
                             </span>
                             <span class="px-3 py-0.5 bg-amber-500/20 border border-amber-500/40 text-amber-300 text-xs font-mono font-bold rounded-full branding-motto">
@@ -157,7 +173,7 @@
                             B.Sc. (Chemistry Special), Grad.Chem (IChem)
                         </p>
                         <p class="text-xs text-slate-300 font-mono flex items-center gap-2">
-                            <i class="fa-solid fa-phone text-rose-400"></i>
+                            <i class="fa-solid fa-phone text-orange-400"></i>
                             <span class="branding-hotlines">071 781 2092 | 077 161 4260</span>
                         </p>
                     </div>
@@ -451,7 +467,7 @@
                 <!-- Section Header -->
                 <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-slate-700">
                     <div>
-                        <h3 class="text-2xl font-bold font-cinzel text-transparent bg-clip-text bg-gradient-to-r from-amber-200 to-rose-400 flex items-center gap-2">
+                        <h3 class="text-2xl font-bold font-cinzel text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-300 flex items-center gap-2">
                             <i class="fa-solid fa-crown text-amber-400"></i> Admin User Accounts & Privilege Management
                         </h3>
                         <p class="text-xs text-slate-400">Manage multi-user administrative accounts, assign role privileges, and monitor multi-device sessions across PC, Tablet, and Mobile devices.</p>
@@ -479,7 +495,7 @@
                     </div>
                     <div class="bg-slate-950/80 p-4 rounded-2xl border border-slate-800 space-y-1">
                         <p class="text-xs text-slate-400 uppercase font-bold">Super Admins</p>
-                        <p id="statsSuperAdmins" class="text-2xl font-black font-mono text-rose-400">3</p>
+                        <p id="statsSuperAdmins" class="text-2xl font-black font-mono text-orange-400">3</p>
                         <p class="text-[10px] text-slate-500">Full System Control</p>
                     </div>
                     <div class="bg-slate-950/80 p-4 rounded-2xl border border-slate-800 space-y-1">
@@ -879,7 +895,7 @@
                             <button onclick="window.LMSCore.exportErpConfigJson()" class="p-2.5 bg-slate-900 hover:bg-slate-800 text-indigo-300 border border-indigo-500/40 rounded-xl flex items-center justify-center gap-1.5 transition">
                                 <i class="fa-solid fa-download"></i> erp-config.json
                             </button>
-                            <button onclick="window.LMSCore.exportUsersJson()" class="p-2.5 bg-slate-900 hover:bg-slate-800 text-rose-300 border border-rose-500/40 rounded-xl flex items-center justify-center gap-1.5 transition">
+                            <button onclick="window.LMSCore.exportUsersJson()" class="p-2.5 bg-slate-900 hover:bg-slate-800 text-orange-300 border border-orange-500/40 rounded-xl flex items-center justify-center gap-1.5 transition">
                                 <i class="fa-solid fa-download"></i> users.json
                             </button>
                             <button onclick="downloadTeacherDocsJson()" class="p-2.5 bg-slate-900 hover:bg-slate-800 text-emerald-300 border border-emerald-500/40 rounded-xl flex items-center justify-center gap-1.5 transition">
@@ -939,6 +955,101 @@
                     <h3 class="text-xl font-bold font-cinzel text-amber-300 flex items-center gap-2">
                         <i class="fa-solid fa-palette text-amber-400"></i> Academy Branding & ERP Settings
                     </h3>
+
+                    <!-- Visual Identity & Media Customizer (Logo, Teacher Photo, Banner) -->
+                    <div class="p-5 rounded-2xl bg-slate-950/90 border border-amber-500/40 space-y-4 shadow-xl">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between border-b border-slate-800 pb-3 gap-2">
+                            <div>
+                                <h4 class="text-xs font-bold text-amber-400 uppercase tracking-wider flex items-center gap-2">
+                                    <i class="fa-solid fa-image text-amber-400"></i> Media & Artwork Customization
+                                </h4>
+                                <p class="text-[11px] text-slate-400 mt-0.5">Customize ERP's Banner, Teacher's Photo, and Academy Logo with instant live previews.</p>
+                            </div>
+                            <span class="text-[10px] text-amber-300/80 bg-amber-500/10 border border-amber-500/30 px-2.5 py-1 rounded-full font-mono self-start sm:self-auto">
+                                Supports URLs & Local Image Upload
+                            </span>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+                            <!-- 1. Academy Logo -->
+                            <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 space-y-3 flex flex-col justify-between">
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-200 mb-1 flex items-center gap-1.5">
+                                        <i class="fa-solid fa-certificate text-amber-400"></i> Academy Logo:
+                                    </label>
+                                    <div class="flex items-center gap-3 my-2 bg-slate-950/60 p-2.5 rounded-xl border border-slate-800">
+                                        <img id="previewCustLogo" src="assets/images/logo.png" alt="Logo Preview" class="w-14 h-14 object-contain rounded-xl border border-amber-500/40 p-1 bg-slate-950 shadow-md">
+                                        <div class="text-[11px] text-slate-400 space-y-0.5">
+                                            <p class="font-bold text-slate-200">Navbar & App Logo</p>
+                                            <p class="text-[10px] text-slate-500">Square PNG / SVG</p>
+                                        </div>
+                                    </div>
+                                    <input type="text" id="custLogoUrl" placeholder="Image URL (e.g. assets/images/logo.png)" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-xs text-slate-100 font-mono mb-2">
+                                </div>
+                                <div class="flex items-center gap-2 pt-1">
+                                    <label class="cursor-pointer flex-1 text-center px-3 py-2 bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-200 text-xs font-bold rounded-xl transition flex items-center justify-center gap-1.5">
+                                        <i class="fa-solid fa-upload text-amber-400"></i> Upload Logo
+                                        <input type="file" id="custLogoFile" accept="image/*" class="hidden">
+                                    </label>
+                                    <button type="button" onclick="resetBrandingMedia('logo')" class="px-3 py-2 bg-slate-950 hover:bg-slate-800 border border-slate-800 text-slate-400 hover:text-slate-200 text-xs rounded-xl" title="Reset to default logo">
+                                        <i class="fa-solid fa-arrow-rotate-left"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- 2. Teacher Photo -->
+                            <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 space-y-3 flex flex-col justify-between">
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-200 mb-1 flex items-center gap-1.5">
+                                        <i class="fa-solid fa-user-tie text-orange-400"></i> Teacher's Photo:
+                                    </label>
+                                    <div class="flex items-center gap-3 my-2 bg-slate-950/60 p-2.5 rounded-xl border border-slate-800">
+                                        <img id="previewCustTeacher" src="assets/images/teacher.png" alt="Teacher Preview" class="w-14 h-16 object-cover object-top rounded-xl border border-amber-500/40 bg-slate-950 shadow-md">
+                                        <div class="text-[11px] text-slate-400 space-y-0.5">
+                                            <p class="font-bold text-slate-200">Teacher Avatar Photo</p>
+                                            <p class="text-[10px] text-slate-500">Portrait PNG / JPG</p>
+                                        </div>
+                                    </div>
+                                    <input type="text" id="custTeacherPhotoUrl" placeholder="Image URL (e.g. assets/images/teacher.png)" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-xs text-slate-100 font-mono mb-2">
+                                </div>
+                                <div class="flex items-center gap-2 pt-1">
+                                    <label class="cursor-pointer flex-1 text-center px-3 py-2 bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-200 text-xs font-bold rounded-xl transition flex items-center justify-center gap-1.5">
+                                        <i class="fa-solid fa-upload text-orange-400"></i> Upload Photo
+                                        <input type="file" id="custTeacherPhotoFile" accept="image/*" class="hidden">
+                                    </label>
+                                    <button type="button" onclick="resetBrandingMedia('teacher')" class="px-3 py-2 bg-slate-950 hover:bg-slate-800 border border-slate-800 text-slate-400 hover:text-slate-200 text-xs rounded-xl" title="Reset to default teacher photo">
+                                        <i class="fa-solid fa-arrow-rotate-left"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- 3. ERP Banner -->
+                            <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 space-y-3 flex flex-col justify-between">
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-200 mb-1 flex items-center gap-1.5">
+                                        <i class="fa-solid fa-panorama text-cyan-400"></i> ERP's Banner:
+                                    </label>
+                                    <div class="flex items-center gap-3 my-2 bg-slate-950/60 p-2.5 rounded-xl border border-slate-800">
+                                        <img id="previewCustBanner" src="assets/images/teacher_banner.png" alt="Banner Preview" class="w-20 h-14 object-cover rounded-xl border border-amber-500/40 bg-slate-950 shadow-md">
+                                        <div class="text-[11px] text-slate-400 space-y-0.5">
+                                            <p class="font-bold text-slate-200">Showcase Hero Banner</p>
+                                            <p class="text-[10px] text-slate-500">Wide banner or header</p>
+                                        </div>
+                                    </div>
+                                    <input type="text" id="custBannerUrl" placeholder="Image URL (e.g. assets/images/teacher_banner.png)" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-xs text-slate-100 font-mono mb-2">
+                                </div>
+                                <div class="flex items-center gap-2 pt-1">
+                                    <label class="cursor-pointer flex-1 text-center px-3 py-2 bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-200 text-xs font-bold rounded-xl transition flex items-center justify-center gap-1.5">
+                                        <i class="fa-solid fa-upload text-cyan-400"></i> Upload Banner
+                                        <input type="file" id="custBannerFile" accept="image/*" class="hidden">
+                                    </label>
+                                    <button type="button" onclick="resetBrandingMedia('banner')" class="px-3 py-2 bg-slate-950 hover:bg-slate-800 border border-slate-800 text-slate-400 hover:text-slate-200 text-xs rounded-xl" title="Reset to default banner">
+                                        <i class="fa-solid fa-arrow-rotate-left"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div>
@@ -1142,10 +1253,10 @@
 
     <!-- 3. Reset User Password Modal -->
     <div id="resetUserPassModal" class="hidden fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-        <div class="glass-panel p-6 max-w-sm w-full space-y-4 border-rose-500/40 shadow-2xl relative">
+        <div class="glass-panel p-6 max-w-sm w-full space-y-4 border-orange-500/40 shadow-2xl relative">
             <div class="flex items-center justify-between pb-3 border-b border-slate-700">
-                <h3 class="text-base font-bold font-cinzel text-rose-300 flex items-center gap-2">
-                    <i class="fa-solid fa-key text-rose-400"></i> Reset User Password
+                <h3 class="text-base font-bold font-cinzel text-orange-300 flex items-center gap-2">
+                    <i class="fa-solid fa-key text-orange-400"></i> Reset User Password
                 </h3>
                 <button onclick="closeResetUserPassModal()" class="text-slate-400 hover:text-white"><i class="fa-solid fa-xmark text-lg"></i></button>
             </div>
@@ -1155,7 +1266,7 @@
                 <input type="password" id="resetPassNewValue" required placeholder="New Password" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-xs text-slate-100 font-mono">
                 <div class="flex justify-end gap-2 pt-2">
                     <button type="button" onclick="closeResetUserPassModal()" class="px-3 py-1.5 bg-slate-900 border border-slate-700 rounded-xl text-xs text-slate-300">Cancel</button>
-                    <button type="submit" class="px-3 py-1.5 bg-rose-600 hover:bg-rose-500 text-white font-bold rounded-xl text-xs">Update Password</button>
+                    <button type="submit" class="px-3 py-1.5 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-xl text-xs">Update Password</button>
                 </div>
             </form>
         </div>
@@ -1379,7 +1490,7 @@
                     </div>
                 </div>
                 <div class="flex justify-between items-center pt-2">
-                    <button type="button" onclick="resetDefaultColumns()" class="text-xs text-rose-400 hover:underline">Reset to Default 5 Columns</button>
+                    <button type="button" onclick="resetDefaultColumns()" class="text-xs text-orange-400 hover:underline">Reset to Default 5 Columns</button>
                     <button type="submit" class="bg-cyan-600 hover:bg-cyan-500 text-white font-bold px-4 py-2 rounded-xl text-xs shadow-md">Add Column</button>
                 </div>
             </form>
@@ -1388,7 +1499,7 @@
 
     <!-- Footer -->
     <footer class="bg-slate-950 border-t border-slate-900 py-6 text-center text-xs text-slate-500 no-print">
-        <p>&copy; 2026 Sheshadi Science Academy. Pure JSON Database Multi-User Engine.</p>
+        <p>&copy; 2026 Sathsarani Science Academy. Pure JSON Database Multi-User Engine.</p>
     </footer>
 
     <!-- Core LMS Engine & Scripts -->
@@ -1444,9 +1555,18 @@
             // Background Real-Time Auto-Sync (every 8s)
             window.LMSCore.startRealtimeSync(8000, (type, data) => {
                 if (type === 'students') {
+                    const currentSelectedId = allStudents[curIndex]?.student_info?.student_id;
                     allStudents = data;
                     renderTabs();
-                    if (allStudents[curIndex]) {
+                    if (currentSelectedId) {
+                        const newIdx = allStudents.findIndex(s => s.student_info?.student_id === currentSelectedId);
+                        if (newIdx !== -1) {
+                            curIndex = newIdx;
+                            renderSelectedStudent(allStudents[curIndex]);
+                        } else if (allStudents[curIndex]) {
+                            renderSelectedStudent(allStudents[curIndex]);
+                        }
+                    } else if (allStudents[curIndex]) {
                         renderSelectedStudent(allStudents[curIndex]);
                     }
                 }
@@ -2155,9 +2275,13 @@
             });
 
             allStudents = res.students;
+            document.getElementById('registerStudentForm').reset();
             toggleRegisterModal();
             renderTabs();
-            selectAdminStudent(allStudents.length - 1);
+
+            // Select newly registered student by ID so sorting or real-time sync never causes them to disappear
+            const newIdx = allStudents.findIndex(s => s.student_info && s.student_info.student_id === student_id);
+            selectAdminStudent(newIdx !== -1 ? newIdx : allStudents.length - 1);
             alert(`Student ${name} (${student_id}) registered successfully!`);
         });
 
@@ -2456,8 +2580,86 @@
             document.getElementById('custMotto').value = s.motto || '';
             document.getElementById('custAnnouncement').value = s.announcement || '';
 
+            // Media Customization values
+            const logoVal = s.logo || 'assets/images/logo.png';
+            const teacherVal = s.teacherPhoto || 'assets/images/teacher.png';
+            const bannerVal = s.bannerImage || 'assets/images/teacher_banner.png';
+
+            document.getElementById('custLogoUrl').value = logoVal;
+            document.getElementById('previewCustLogo').src = logoVal;
+
+            document.getElementById('custTeacherPhotoUrl').value = teacherVal;
+            document.getElementById('previewCustTeacher').src = teacherVal;
+
+            document.getElementById('custBannerUrl').value = bannerVal;
+            document.getElementById('previewCustBanner').src = bannerVal;
+
             document.getElementById('custNodeServerUrl').value = cloud.nodeServerUrl || '';
             document.getElementById('custCloudJsonUrl').value = cloud.cloudJsonStudentsUrl || '';
+        }
+
+        // Live input preview listeners for image URLs
+        document.getElementById('custLogoUrl')?.addEventListener('input', (e) => {
+            const val = e.target.value.trim() || 'assets/images/logo.png';
+            document.getElementById('previewCustLogo').src = val;
+        });
+        document.getElementById('custTeacherPhotoUrl')?.addEventListener('input', (e) => {
+            const val = e.target.value.trim() || 'assets/images/teacher.png';
+            document.getElementById('previewCustTeacher').src = val;
+        });
+        document.getElementById('custBannerUrl')?.addEventListener('input', (e) => {
+            const val = e.target.value.trim() || 'assets/images/teacher_banner.png';
+            document.getElementById('previewCustBanner').src = val;
+        });
+
+        // Instant Base64 file upload readers
+        document.getElementById('custLogoFile')?.addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (!file) return;
+            const reader = new FileReader();
+            reader.onload = function(evt) {
+                const b64 = evt.target.result;
+                document.getElementById('custLogoUrl').value = b64;
+                document.getElementById('previewCustLogo').src = b64;
+            };
+            reader.readAsDataURL(file);
+        });
+
+        document.getElementById('custTeacherPhotoFile')?.addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (!file) return;
+            const reader = new FileReader();
+            reader.onload = function(evt) {
+                const b64 = evt.target.result;
+                document.getElementById('custTeacherPhotoUrl').value = b64;
+                document.getElementById('previewCustTeacher').src = b64;
+            };
+            reader.readAsDataURL(file);
+        });
+
+        document.getElementById('custBannerFile')?.addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (!file) return;
+            const reader = new FileReader();
+            reader.onload = function(evt) {
+                const b64 = evt.target.result;
+                document.getElementById('custBannerUrl').value = b64;
+                document.getElementById('previewCustBanner').src = b64;
+            };
+            reader.readAsDataURL(file);
+        });
+
+        function resetBrandingMedia(type) {
+            if (type === 'logo') {
+                document.getElementById('custLogoUrl').value = 'assets/images/logo.png';
+                document.getElementById('previewCustLogo').src = 'assets/images/logo.png';
+            } else if (type === 'teacher') {
+                document.getElementById('custTeacherPhotoUrl').value = 'assets/images/teacher.png';
+                document.getElementById('previewCustTeacher').src = 'assets/images/teacher.png';
+            } else if (type === 'banner') {
+                document.getElementById('custBannerUrl').value = 'assets/images/teacher_banner.png';
+                document.getElementById('previewCustBanner').src = 'assets/images/teacher_banner.png';
+            }
         }
 
         document.getElementById('erpCustomizerForm').addEventListener('submit', async (e) => {
@@ -2470,13 +2672,29 @@
             const motto = document.getElementById('custMotto').value.trim();
             const announcement = document.getElementById('custAnnouncement').value.trim();
 
+            const logo = document.getElementById('custLogoUrl').value.trim() || 'assets/images/logo.png';
+            const teacherPhoto = document.getElementById('custTeacherPhotoUrl').value.trim() || 'assets/images/teacher.png';
+            const bannerImage = document.getElementById('custBannerUrl').value.trim() || 'assets/images/teacher_banner.png';
+
             const nodeServerUrl = document.getElementById('custNodeServerUrl').value.trim();
             const cloudJsonStudentsUrl = document.getElementById('custCloudJsonUrl').value.trim();
 
-            await window.LMSCore.saveSettings({ academyName, tagline, teacherName, teacherTitle, hotlines, motto, announcement });
+            await window.LMSCore.saveSettings({
+                academyName,
+                tagline,
+                teacherName,
+                teacherTitle,
+                hotlines,
+                motto,
+                announcement,
+                logo,
+                teacherPhoto,
+                bannerImage
+            });
             window.LMSCore.saveCloudConfig({ nodeServerUrl, cloudJsonStudentsUrl });
+            window.LMSCore.applyThemeAndBranding();
 
-            alert('ERP Settings & Endpoints saved successfully!');
+            alert('ERP Settings, Media & Artwork saved successfully!');
         });
 
         // =========================================================================
@@ -2613,7 +2831,7 @@
                 }
             } catch (e) {
                 if (badge) {
-                    badge.className = 'px-2.5 py-0.5 rounded-full font-bold bg-rose-500/20 text-rose-300 border border-rose-500/40';
+                    badge.className = 'px-2.5 py-0.5 rounded-full font-bold bg-orange-500/20 text-orange-300 border border-orange-500/40';
                     badge.innerText = 'Connection Error';
                     detail.innerText = e.message;
                 }
