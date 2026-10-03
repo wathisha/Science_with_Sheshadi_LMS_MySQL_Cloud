@@ -751,7 +751,7 @@
         authenticateAdmin(user, pass) {
             const u = (user || '').trim().toLowerCase();
             const p = (pass || '').trim();
-            if (!p || u === 'admin' || p === 'password123') return false;
+            if (!p || u === 'admin' || p === 'admin@0305') return false;
 
             const users = this.getCachedUsers();
             const found = users.find(usr => (usr.username || '').toLowerCase() === u && usr.password === p);
