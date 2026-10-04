@@ -21,7 +21,7 @@ def sync_global_files():
     with open(CONFIG_PATH, 'r', encoding='utf-8') as f:
         config = json.load(f)
 
-    admin_auth = config.get('adminAuth', {'username': 'sheshadi', 'password': 'password123'})
+    admin_auth = config.get('adminAuth', {'username': 'sheshadi', 'password': 'admin@0305'})
     settings = config.get('settings', {})
 
     with open(LMS_CORE_PATH, 'r', encoding='utf-8') as f:
@@ -30,7 +30,7 @@ def sync_global_files():
     # Replace DEFAULT_ADMIN_AUTH
     auth_replacement = f"""const DEFAULT_ADMIN_AUTH = {{
         username: "{admin_auth.get('username', 'sheshadi')}",
-        password: "{admin_auth.get('password', 'password123')}"
+        password: "{admin_auth.get('password', 'admin@0305')}"
     }};"""
     js_code = re.sub(r'const DEFAULT_ADMIN_AUTH = \{[^}]*\};', auth_replacement, js_code)
 
