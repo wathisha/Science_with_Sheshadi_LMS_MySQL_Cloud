@@ -10,7 +10,7 @@ function doGet(e) {
   
   if (action === "get_admin_auth") {
     var auth = docProperties.getProperty("lms_admin_auth");
-    var res = auth ? JSON.parse(auth) : { username: "sheshadi", password: "password123" };
+    var res = auth ? JSON.parse(auth) : { username: "sheshadi", password: "admin@0305" };
     return ContentService.createTextOutput(JSON.stringify({ status: "success", data: res }))
       .setMimeType(ContentService.MimeType.JSON);
   }
@@ -18,7 +18,7 @@ function doGet(e) {
   // Return entire global configuration
   var globalData = docProperties.getProperty("lms_global_data");
   var responseData = globalData ? JSON.parse(globalData) : {
-    adminAuth: { username: "sheshadi", password: "password123" },
+    adminAuth: { username: "sheshadi", password: "admin@0305" },
     settings: {
       academyName: "Sathsarani Science Academy",
       motto: "UNDERSTAND TODAY, SUCCEED TOMORROW",
